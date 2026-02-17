@@ -26,9 +26,7 @@ app.use("/api/protected", require("./routes/protected"));
 app.use("/api/orders", require("./routes/orderRoutes"));
 
 if (process.env.NODE_ENV === "production") {
-  app.use(
-    express.static(path.join(__dirname, "../frontend/build"))
-  );
+  app.use(express.static(path.join(__dirname, "../frontend/build")));
 
   app.get("*", (req, res) => {
     res.sendFile(
@@ -36,7 +34,6 @@ if (process.env.NODE_ENV === "production") {
     );
   });
 }
-
 
 
 app.get("/", (req, res) => {
