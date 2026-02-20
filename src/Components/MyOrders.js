@@ -9,7 +9,7 @@ function MyOrders() {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:5000/api/orders/my-orders",
+        `${process.env.REACT_APP_API_URL}/api/orders/my-orders`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -63,7 +63,7 @@ const styles = {
     padding: "16px",
   },
   heading: {
-    color: "#fff",
+    color: "rgba(34, 28, 28, 0.01)313",
     textAlign: "center",
     marginBottom: "20px",
   },

@@ -10,10 +10,11 @@ const Home = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
+  
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/products/featured")
+      .get(`${process.env.REACT_APP_API_URL}/api/products/featured`)
       .then((res) => {
         setProducts(res.data || []);
         setLoading(false);
