@@ -27,7 +27,7 @@ function Checkout() {
       setLoading(true);
 
       await axios.post(
-        "http://localhost:5000/api/orders",
+        `${process.env.REACT_APP_API_URL}/api/orders`,
         {
           items: cart,
           address,
