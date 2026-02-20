@@ -5,7 +5,7 @@ function Orders() {
   const [orders, setOrders] = useState([]);
 
   useEffect(() => {
-    api.get("/orders/myorders").then(res => setOrders(res.data));
+    api.get(`${process.env.REACT_APP_API_URL}`).then(res => setOrders(res.data));
   }, []);
 
   return (

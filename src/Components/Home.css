@@ -20,8 +20,6 @@
   margin-top: 20px;
 }
 
-/* ===== Grid Layout ===== */
-
 .home-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -32,7 +30,7 @@
   justify-content: center;
   align-items: stretch;
 }
-/* ===== Tablet ===== */
+
 @media (max-width: 1024px) {
   .home-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -40,7 +38,6 @@
   }
 }
 
-/* ===== Mobile ===== */
 @media (max-width: 768px) {
   .home-container {
     padding: 16px;
@@ -61,7 +58,7 @@
   }
 }
 
-/* ===== Button ===== */
+
 
 .home-button-wrapper {
   text-align: center;
